@@ -1,3 +1,11 @@
+document.querySelector("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const input = document.querySelector("#nom");
+  if (input.value.trim() === "") {
+    alert("El camp no pot estar buit");
+    return;
+  }
+
 const contactes = ["Jose", "Saida", "Ruben"];
 const llista = document.createElement('ul');
 contactes.forEach(nom => {
@@ -6,3 +14,5 @@ contactes.forEach(nom => {
   llista.appendChild(li);
 });
 document.body.appendChild(llista);
+
+});
